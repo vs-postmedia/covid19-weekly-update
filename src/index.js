@@ -70,7 +70,7 @@ function updateHeader(data) {
 function updateFooter(data) {
 	const el = document.getElementById('footer');
 
-	el.innerHTML = `<p class="footer-copy">There were ${numberWithCommas(data.cases_new)} new cases reported in the past seven days in B.C., for a total of ${numberWithCommas(data.cases_total)} cases.</p><p class="footer-copy-bold">Read the full report <a href="http://www.bccdc.ca/health-info/diseases-conditions/covid-19/data-trends#Reports" _target="blank">here</a> | Next update: ${data.next_update} at 1 p.m. or later.</p>`;
+	el.innerHTML = `<p class="footer-copy">There were ${numberWithCommas(data.cases_new)} new cases reported between ${data.week_start} and ${data.week_end} in B.C., for a total of ${numberWithCommas(data.cases_total)} COVID-19 cases.</p><p class="footer-copy-bold">Read the full report <a href="http://www.bccdc.ca/health-info/diseases-conditions/covid-19/data-trends#Reports" _target="blank">here</a> | Next update: ${data.next_update} at 1 p.m. or later.</p>`;
 }
 
 function numberWithCommas(x) {
