@@ -6,7 +6,11 @@
 }
 
 
-
+#app {
+	margin: 0 auto;
+	max-width: 600px;
+	padding: 3px;
+}
 /* POSTMEDIA STYLES */
 #app h1 {
 	color: var(--black);
@@ -37,11 +41,22 @@
 }
 
 #app footer {
-	display: flex;
+	display: block;
+	margin-top: 15px;
 }
 
 #app footer > p {
-	flex: 1;
+	margin-bottom: 5px;
+}
+
+#app .header-copy, #app .footer-copy-bold {
+	font-family: BentonSansCond-Bold, sans-serif;
+	font-weight: bold;
+	text-align: center;
+}
+
+#app .footer-copy-bold {
+	text-align: left;
 }
 
 #app .note,

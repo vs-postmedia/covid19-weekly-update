@@ -1,6 +1,6 @@
 {
-  "name": "graphics-template",
-  "homepage": "https://vs-postmedia.github.io/graphics-template/",
+  "name": "covid19-weekly-update",
+  "homepage": "https://vs-postmedia.github.io/covid19-weekly-update/",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,9 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "@babel/runtime": "^7.10.2",
-    "axios": "^0.19.2",
-    "d3": "^5.15.0",
-    "d3-svg-annotation": "^2.5.1"
+    "papaparse": "^5.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -34,7 +32,6 @@
     "html-loader": "^1.0.0",
     "html-webpack-plugin": "^4.0.2",
     "mini-css-extract-plugin": "^0.9.0",
-    "node-sass": "^4.14.1",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-flexbugs-fixes": "^4.2.1",
     "postcss-loader": "^3.0.0",

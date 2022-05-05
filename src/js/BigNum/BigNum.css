@@ -1,0 +1,25 @@
+#big-num-container {
+	display: flex;
+	justify-content: space-evenly;
+	margin: 1rem 0;
+
+}
+
+#big-num-container .big-num {
+	text-align: center;
+}
+#big-num-container .big-num .hospitalized {
+	color: var(--blue01);
+}
+#big-num-container .big-num .icu {
+	color: var(--brite_purple01);
+}
+
+#big-num-container .num {
+	font-size: 2.5rem;
+}
+
+#big-num-container .sub {
+	color: var(--grey03);
+	text-transform: uppercase;
+}
