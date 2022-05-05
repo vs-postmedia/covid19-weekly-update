@@ -5,10 +5,15 @@
 	font-family: BentonSansCond-BoldItalic;
 }
 
+#app a:-webkit-any-link {
+	color: var(--black01);
+	font-family: BentonSansCond-Regular;
+}
+
 
 #app {
 	margin: 0 auto;
-	max-width: 600px;
+	max-width: 550px;
 	padding: 3px;
 }
 /* POSTMEDIA STYLES */
