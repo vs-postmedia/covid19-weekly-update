@@ -98,7 +98,7 @@ var init = /*#__PURE__*/function () {
             string = '';
             el = document.getElementById('big-num-container');
             data.forEach(function (d, i) {
-              string += createBigNumString(d.num, d.sub);
+              string += createBigNumString(d.num, d.sub, d.date);
             });
             el.innerHTML = string;
 
@@ -116,8 +116,8 @@ var init = /*#__PURE__*/function () {
 }(); // TEMPLATE
 
 
-function createBigNumString(num, sub) {
-  return "\n\t\t<div class=\"big-num\">\n\t\t\t<h2 class=\"num ".concat(sub, "\">").concat(numberWithCommas(num), "</h2>\n\t\t\t<p class=\"sub\">").concat(sub, "</p>\n\t\t</div>\n\t");
+function createBigNumString(num, sub, date) {
+  return "\n\t\t<div class=\"big-num\">\n\t\t\t<h2 class=\"num ".concat(sub, "\">").concat(numberWithCommas(num), "</h2>\n\t\t\t<p class=\"sub\">").concat(sub, "</p>\n\t\t\t<p class=\"date\">as of ").concat(date, "</p>\n\t\t</div>\n\t");
 }
 
 function numberWithCommas(x) {
@@ -163,13 +163,16 @@ var src_init = /*#__PURE__*/function () {
 
                 var stats = [{
                   sub: 'icu',
-                  num: data.icu
+                  num: data.icu,
+                  date: data.last_update
                 }, {
                   sub: 'hospitalized',
-                  num: data.hospitalized
+                  num: data.hospitalized,
+                  date: data.last_update
                 }, {
                   sub: 'deaths',
-                  num: data.deaths
+                  num: data.deaths,
+                  date: data.week_end
                 }];
                 dataObj = data;
                 dataObj.stats = stats; // show it!
@@ -207,7 +210,7 @@ function update() {
 
 function updateHeader(data) {
   var el = document.getElementById('header');
-  el.innerHTML = "<p class=\"header-copy\">COVID-19 figures for the week of ".concat(data.week_start, " to ").concat(data.week_end, ":</p>");
+  el.innerHTML = "<p class=\"header-copy\">COVID-19 figures for the week ending ".concat(data.last_update, ":</p>");
 }
 
 function updateFooter(data) {
