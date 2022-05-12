@@ -23,3 +23,8 @@
 	color: var(--grey03);
 	text-transform: uppercase;
 }
+#big-num-container .date {
+	color: var(--grey03);
+	font-family: BentonSansCond-RegItalic, italic;
+	font-size: 0.9rem;
+}

@@ -20,21 +20,25 @@ const init = async () => {
 		complete: res => {
 			// get the latest week of data
 			const data = res.data[res.data.length - 1];
-			console.log(data);
+
+			console.log(data)
 
 			// prep data for BigNum componenet
 			const stats = [
 				{
 					sub: 'icu',
-					num: data.icu
+					num: data.icu,
+					date: data.last_update
 				},
 				{
 					sub: 'hospitalized',
-					num: data.hospitalized
+					num: data.hospitalized,
+					date: data.last_update
 				},
 				{
 					sub: 'deaths',
-					num: data.deaths
+					num: data.deaths,
+					date: data.week_end
 				}
 			];
 
@@ -64,7 +68,7 @@ function update() {
 
 function updateHeader(data) {
 	const el = document.getElementById('header');
-	el.innerHTML = `<p class="header-copy">COVID-19 figures for the week of ${data.week_start} to ${data.week_end}:</p>`;
+	el.innerHTML = `<p class="header-copy">COVID-19 figures for the week ending ${data.last_update}:</p>`;
 }
 
 function updateFooter(data) {

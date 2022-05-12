@@ -6,7 +6,7 @@ const init = async data => {
 	let el = document.getElementById('big-num-container');
 
 	data.forEach((d,i) => {
-		string += createBigNumString(d.num, d.sub);
+		string += createBigNumString(d.num, d.sub, d.date);
 	});
 
 	el.innerHTML = string;
@@ -14,11 +14,12 @@ const init = async data => {
 
 
 // TEMPLATE
-function createBigNumString(num, sub) {
+function createBigNumString(num, sub, date) {
 	return `
 		<div class="big-num">
 			<h2 class="num ${sub}">${numberWithCommas(num)}</h2>
 			<p class="sub">${sub}</p>
+			<p class="date">as of ${date}</p>
 		</div>
 	`;
 }
